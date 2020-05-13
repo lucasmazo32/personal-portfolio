@@ -67,36 +67,38 @@ body {
   }
 }
 
-.wrench {
-  opacity: 0;
-  position: absolute;
-  left: -50px;
-  top: -25px;
-  width: 50px;
-  @media screen and (max-width: 576px) {
-    display: none;
-  }
-  animation: wrench 3s ease;
-  animation-iteration-count: 2;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  transition: all 0.5s;
+.wrench, .hat {
+  display: none;
 }
 
-.hat {
-  opacity: 0;
-  @media screen and (max-width: 576px) {
-    display: none;
+@media screen and (min-width: 577px) {
+  .wrench {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    left: -50px;
+    top: -25px;
+    width: 50px;
+    animation: wrench 3s ease;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition: all 0.5s;
   }
-  position: absolute;
-  width: 50px;
-  right: -60px;
-  bottom: -25px;
-  animation: hat 3s ease;
-  animation-iteration-count: 2;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  transition: all 0.5s;
+  
+  .hat {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 50px;
+    right: -60px;
+    bottom: -25px;
+    animation: hat 3s ease;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition: all 0.5s;
+  }
 }
 
 @keyframes engineering {

@@ -1,7 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import photo from '../assets/images/profile-photo.png';
+import actions from '../actions/index';
 
-export default function About() {
+const { changeToBio } = actions;
+
+function About({ changeToBio }) {
   return (
     <div className="about margin-containers">
       <div className="personal-info">
@@ -36,8 +41,18 @@ export default function About() {
           </i>
         </div>
         <br />
-        <button type="button" className="more-info btn"><span>More Info</span></button>
+        <button type="button" className="more-info btn" onClick={changeToBio}><span>More Info</span></button>
       </div>
     </div>
   );
 }
+
+About.propTypes = {
+  changeToBio: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = dispatch => ({
+  changeToBio: page => dispatch(changeToBio(page)),
+});
+
+export default connect(null, mapDispatchToProps)(About);
