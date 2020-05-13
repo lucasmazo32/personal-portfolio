@@ -4,7 +4,7 @@ import About from '../component/About';
 import Projects from '../component/Projects';
 import Contact from '../component/Contact';
 
-export default function Main() {
+function Main() {
   return (
     <div>
       <Header />
@@ -14,3 +14,5 @@ export default function Main() {
     </div>
   );
 }
+
+export default Main;

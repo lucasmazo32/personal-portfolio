@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers/index';
+import './assets/style/pageTransition.css';
 import './assets/style/style.css';
 import App from './component/App';
 import * as serviceWorker from './serviceWorker';

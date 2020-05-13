@@ -7,7 +7,7 @@ import Bio from '../container/Bio';
 function App({ page }) {
   return (
     <div className="container-xl">
-      { page ? <Main /> : <Bio /> }
+      { page ? <Main page={page} /> : <Bio page={page} />}
     </div>
   );
 }
