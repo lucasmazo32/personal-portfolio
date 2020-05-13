@@ -5,11 +5,6 @@ import hat from '../assets/images/hat.png';
 export default function Header() {
   return (
     <div className="header box-shadow">
-      <nav>
-        <button type="button" className="btn btn-custom">About</button>
-        <button type="button" className="btn btn-custom">Projects</button>
-        <button type="button" className="btn btn-custom">Contact</button>
-      </nav>
       <div className="main-phrase">
         <img src={wrench} alt="wrench" className="wrench" />
         <h1>

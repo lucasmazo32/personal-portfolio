@@ -1,5 +1,5 @@
-import react from '../assets/images/icons/react.png';
-import redux from '../assets/images/icons/redux.png';
+// import react from '../assets/images/icons/react.png';
+// import redux from '../assets/images/icons/redux.png';
 import javascript from '../assets/images/icons/javascript.png';
 import rails from '../assets/images/icons/rails.png';
 import heroku from '../assets/images/icons/heroku.png';
