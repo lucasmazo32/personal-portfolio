@@ -1,12 +1,10 @@
-import React from 'react'
-import Header from './Header';
-import About from './About';
+import React from 'react';
+import Main from '../container/Main';
 
 export default function App() {
   return (
     <div className="container-xl">
-      <Header />
-      <About />
+      <Main />
     </div>
-  )
+  );
 }
