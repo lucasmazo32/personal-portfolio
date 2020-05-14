@@ -8,6 +8,7 @@ const projectsToJSX = () => Object.keys(projects).map(pKey => (
       <h3>{projects[pKey].title}</h3>
       <p>{ projects[pKey].text }</p>
       <div className="icons">
+        Built with:&nbsp;
         {
             projects[pKey].icons.map(iconURL => <img src={iconURL} key={iconURL} alt="icon" />)
           }

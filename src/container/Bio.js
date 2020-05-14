@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Timeline from '../component/Timeline';
 import actions from '../actions/index';
 
 const { changeToMain } = actions;
@@ -9,7 +10,10 @@ function Bio({ changeToMain }) {
   return (
     <div className="bio">
       <button type="button" onClick={changeToMain}>Go back</button>
-      Hello World!
+      <div>
+        <Timeline />
+      </div>
+      <button type="button" onClick={changeToMain}>Go back</button>
     </div>
   );
 }

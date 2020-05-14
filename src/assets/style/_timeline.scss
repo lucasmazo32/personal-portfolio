@@ -1,0 +1,59 @@
+@import "variables";
+
+$img-s: 80px;
+$time-padding: 20px;
+$dot-size: 5px;
+$time-blue: #47A8BD;
+
+.timeline-element {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  padding: $time-padding;
+  img {
+    width: $img-s;
+    background-color: $time-blue;
+    border-radius: 50%;
+  }
+  &::before {
+    display: block;
+    border-radius: 50%;
+    top: $time-padding/3;
+    left: $img-s/2 + $time-padding - $dot-size/2;
+    width: $dot-size;
+    height: $dot-size;
+    background-color: $time-blue;
+    position: absolute;
+    content: "";
+  }
+  &::after {
+    display: block;
+    border-radius: 50%;
+    bottom: $time-padding/3;
+    left: $img-s/2 + $time-padding - $dot-size/2;
+    width: $dot-size;
+    height: $dot-size;
+    background-color: $time-blue;
+    position: absolute;
+    content: "";
+  }
+  &:first-of-type {
+    &::before {
+      display: none;
+    }
+  }
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.timeline-year {
+  width: $img-s;
+  text-align: center;
+}
+
+.timeline-desc {
+  padding-left: 20px;
+}

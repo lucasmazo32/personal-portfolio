@@ -170,8 +170,14 @@
 
 .icons {
   margin: 1rem 0;
+  margin-left: 0.75rem;
+  @media screen and (max-width: 768px) {
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
   img {
-    padding-left: 0.75rem;
+    padding-left: 0.5rem;
     height: 30px;
     @media screen and (max-width: 768px) {
       &:first-of-type {
