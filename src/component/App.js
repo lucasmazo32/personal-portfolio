@@ -1,13 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Main from '../container/Main';
 import Bio from '../container/Bio';
 
 function App({ page }) {
   return (
     <div className="container-xl">
-      { page ? <Main page={page} /> : <Bio page={page} />}
+      { page
+        ? <Main />
+        : <Bio /> }
     </div>
   );
 }

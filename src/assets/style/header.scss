@@ -1,0 +1,136 @@
+@import "variables";
+
+// Header
+
+.header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0;
+  padding-bottom: 50px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
+  h1 {
+    font-family: $font;
+    opacity: 0;
+    font-size: 3rem;
+    position: relative;
+    animation: engineering 1s ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    @media screen and (max-width: 992px){
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 7vw;
+    }
+  }
+}
+
+.main-phrase {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.wrench, .hat {
+  display: none;
+}
+
+@media screen and (min-width: 577px) {
+  .wrench {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    left: -50px;
+    top: -25px;
+    width: 50px;
+    animation: wrench 3s ease;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition: all 0.5s;
+  }
+  
+  .hat {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 50px;
+    right: -60px;
+    bottom: -25px;
+    animation: hat 3s ease;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition: all 0.5s;
+  }
+}
+
+@keyframes engineering {
+  from {
+    opacity: 0.1;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes wrench {
+  0% {
+    opacity: 1;
+    transform: rotate(0)translate(0, 0);
+    transform-origin: top right;
+  }
+  35% {
+    transform: rotate(90deg)translate(38px, 10px);
+    transform-origin: top right;
+  }
+  50% {
+    transform: rotate(45deg)translate(20px, 15px);
+    transform-origin: top right;
+  }
+  65% {
+    transform: rotate(90deg)translate(38px, 10px);
+    transform-origin: top right;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0)translate(0, 0);
+    transform-origin: top right;
+  }
+}
+
+@keyframes hat {
+  0% {
+    opacity: 1;
+    transform: rotate(0)translate(0, 0);
+    transform-origin: top right;
+  }
+  30% {
+    transform: rotate(20deg)translate(0, 0);
+    transform-origin: top right;
+  }
+  60% {
+    transform: rotate(20deg)translate(0, -20px);
+    transform-origin: top right;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0)translate(0, 0);
+    transform-origin: top right;
+  }
+}

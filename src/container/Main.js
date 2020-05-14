@@ -6,7 +6,7 @@ import Contact from '../component/Contact';
 
 function Main() {
   return (
-    <div>
+    <div className="main">
       <Header />
       <About />
       <Projects />

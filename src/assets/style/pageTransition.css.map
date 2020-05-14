@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,kBAAkB,CAAC;EACjB,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,WAAW;CACxB;;AACD;;;;;;;;;EASE",
-    "sources": [
-        "pageTransition.scss"
-    ],
-    "names": [],
-    "file": "pageTransition.css"
-}
