@@ -3,7 +3,7 @@ import hobbies from '../helper/hobbies';
 
 const hobbiesGen = () => (
   hobbies.map(hobby => (
-    <div className="hobby" key={hobby}>
+    <div className="hobby" key={hobby.desc}>
       <img src={hobby.img} alt="" />
       <span>{hobby.desc}</span>
     </div>

@@ -10,9 +10,14 @@ import Hobbies from '../component/Hobbies';
 const { changeToMain } = actions;
 
 function Bio({ changeToMain }) {
+  const handleClick = changeFunc => {
+    changeFunc();
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="bio">
-      <button className="btn btn-back" type="button" onClick={changeToMain}>Go back</button>
+      <button className="btn btn-back" type="button" onClick={() => handleClick(changeToMain)}>Go back</button>
       <div className="container-xl">
         <Background />
         <Hobbies />

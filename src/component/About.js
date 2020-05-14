@@ -7,6 +7,11 @@ import actions from '../actions/index';
 const { changeToBio } = actions;
 
 function About({ changeToBio }) {
+  const handleClick = changeFunc => {
+    changeFunc();
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="about margin-containers">
       <div className="personal-info">
@@ -41,7 +46,7 @@ function About({ changeToBio }) {
           </i>
         </div>
         <br />
-        <button type="button" className="more-info btn" onClick={changeToBio}><span>More Info</span></button>
+        <button type="button" className="more-info btn" onClick={() => handleClick(changeToBio)}><span>More Info</span></button>
       </div>
     </div>
   );
