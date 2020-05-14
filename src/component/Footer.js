@@ -9,5 +9,5 @@ export default function Footer() {
       &nbsp;
       <a href="https://fontawesome.com" target="_blank" rel="noopener noreferrer">FontAwesome</a>
     </footer>
-  )
+  );
 }

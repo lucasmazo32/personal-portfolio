@@ -31,7 +31,7 @@ const projectsToJSX = () => Object.keys(projects).map(pKey => (
 export default function Projects() {
   return (
     <div className="margin-containers projects">
-      <h2>Projects</h2>
+      <h2 className="m-a title-under">Projects</h2>
       { projectsToJSX() }
     </div>
   );

@@ -5,9 +5,11 @@
 @import "contact";
 @import "footer";
 @import "timeline";
+@import "hobby";
+@import "background";
 
 body {
-  background-color: $page-bk;
+  background: linear-gradient(rgb(221, 221, 221) 0%, rgb(238, 238, 238) 100%);
   font-family: 'Noto Sans JP', sans-serif;
   @media screen and (max-width: 992px) {
     font-size: 1rem;
@@ -16,10 +18,28 @@ body {
 
 // general
 
-.box-shadow {
-  box-shadow: 10px 10px 2px 0px $my-blue;
-}
-
 .margin-containers {
   margin-top: 50px;
+}
+
+.btn-back {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-radius: 0 0 10px 10px;
+  background-color: $my-blue;
+  color: $page-bk;
+  &:hover {
+    color: $page-bk;
+  }
+}
+
+.title-under {
+  border-bottom: 3px solid $my-blue;
+}
+
+.m-a {
+  width: max-content;
+  margin: 0 auto;
 }

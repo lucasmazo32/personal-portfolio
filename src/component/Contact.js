@@ -3,7 +3,7 @@ import React from 'react';
 export default function Contact() {
   return (
     <div className="contact-container margin-containers">
-      <h2>Contact Information</h2>
+      <h2 className="title-under m-a">Contact Information</h2>
       <div className="contact-info">
         <span>
           Phone number: &nbsp;

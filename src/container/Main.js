@@ -9,9 +9,11 @@ function Main() {
   return (
     <div className="main">
       <Header />
-      <About />
-      <Projects />
-      <Contact />
+      <div className="container-xl">
+        <About />
+        <Projects />
+        <Contact />
+      </div>
       <Footer />
     </div>
   );
