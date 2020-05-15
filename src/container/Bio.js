@@ -23,7 +23,7 @@ function Bio({ changeToMain, lang }) {
         <Timeline lang={lang} />
       </div>
       <button className="btn btn-back" type="button" onClick={() => handleClick(changeToMain)}>{ lang ? 'Go back' : 'Regresar' }</button>
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

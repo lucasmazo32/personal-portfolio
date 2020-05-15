@@ -4,7 +4,7 @@ import hobbies from '../helper/hobbies';
 
 const hobbiesGen = lang => (
   hobbies.map(hobby => (
-    <div className="hobby" key={hobby.desc}>
+    <div className="hobby" key={hobby.eng}>
       <img src={hobby.img} alt="" />
       <span>{ lang ? hobby.eng : hobby.esp }</span>
     </div>

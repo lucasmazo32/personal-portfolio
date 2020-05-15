@@ -1,14 +1,16 @@
 import actions from '../actions/index';
 
 const { action } = actions;
-const { CHANGE_TO_BIO, CHANGE_TO_MAIN } = action;
+const { CHANGE_TO_BIO, CHANGE_TO_MAIN, CHANGE_TO_LANG } = action;
 
-const pageReducer = (state = true, action) => {
+const pageReducer = (state = 'main', action) => {
   switch (action.type) {
     case CHANGE_TO_MAIN:
-      return true;
+      return 'main';
     case CHANGE_TO_BIO:
-      return false;
+      return 'bio';
+    case CHANGE_TO_LANG:
+      return 'lang';
     default:
       return state;
   }

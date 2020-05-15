@@ -1,37 +1,58 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Main from './Main';
-import Bio from './Bio';
+import { connect } from 'react-redux';
+import Standard from './Standard';
+import FirstTime from '../component/FirstTime';
+import actions from '../actions/index';
+
+const { changeToLang, changeToMain } = actions;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
-    this.localPage = localStorage.getItem('page');
+    this.firstTime = localStorage.getItem('defLang');
+    this.chooseRender = this.chooseRender.bind(this);
+  }
+
+  chooseRender() {
+    const { page, changeToMain } = this.props;
+    switch (page) {
+      case 'lang':
+        return <FirstTime changeToMain={() => changeToMain} />;
+      default:
+        return <Standard />;
+    }
   }
 
   render() {
-    const { lang, page } = this.props;
-
+    const { changeToLang } = this.props;
+    (() => {
+      if (this.firstTime === null) {
+        changeToLang();
+      }
+    })();
     return (
       <div>
-        { page
-          ? <Main lang={lang} />
-          : <Bio lang={lang} /> }
+        { this.chooseRender() }
       </div>
     );
   }
 }
 
 App.propTypes = {
-  page: PropTypes.bool.isRequired,
-  lang: PropTypes.bool.isRequired,
+  changeToLang: PropTypes.func.isRequired,
+  page: PropTypes.string.isRequired,
+  changeToMain: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = ({ pageReducer: page, langReducer: lang }) => ({
-  page,
-  lang,
+const mapDispatchToProps = dispatch => ({
+  changeToLang: page => dispatch(changeToLang(page)),
+  changeToMain: page => dispatch(changeToMain(page)),
 });
 
-export default connect(mapStateToProps)(App);
+const mapStateToProps = ({ pageReducer: page }) => ({
+  page,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

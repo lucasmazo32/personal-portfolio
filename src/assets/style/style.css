@@ -976,9 +976,87 @@ footer {
   color: #F1F7ED;
 }
 
+.first-time {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #F1F7ED;
+  top: calc(50vh - 150px);
+  height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .first-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    top: calc(50vh - 300px);
+    height: 600px;
+  }
+}
+
+.first-time div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: -webkit-gradient(linear, left top, left bottom, from(#427AA3), to(#369ae7));
+  background: linear-gradient(180deg, #427AA3 0%, #369ae7 100%);
+  -webkit-box-shadow: 0 0 0 0 white;
+          box-shadow: 0 0 0 0 white;
+  cursor: pointer;
+}
+
+.first-time div:first-of-type {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 1px white solid;
+}
+
+.first-time div:last-of-type {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 1px white solid;
+}
+
+@media screen and (max-width: 768px) {
+  .first-time div {
+    height: 100%;
+  }
+  .first-time div:first-of-type {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-right: 0;
+    border-bottom: 1px solid white;
+  }
+  .first-time div:last-of-type {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-left: 0;
+    border-top: 1px white solid;
+  }
+}
+
+.first-time span {
+  max-width: 80%;
+  text-align: center;
+}
+
 body {
+  min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
   background: linear-gradient(#dddddd 0%, #eeeeee 100%);
+  background-repeat: no-repeat;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
