@@ -26,9 +26,9 @@ body {
 .btn-back {
   width: 100%;
   position: sticky;
-  top: 0;
+  bottom: 0;
   z-index: 5;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px 10px 0 0;
   background-color: $my-blue;
   color: $page-bk;
   &:hover {

@@ -17,12 +17,12 @@ function Bio({ changeToMain, lang }) {
 
   return (
     <div className="bio">
-      <button className="btn btn-back" type="button" onClick={() => handleClick(changeToMain)}>Go back</button>
       <div className="container-xl">
         <Background lang={lang} />
         <Hobbies lang={lang} />
         <Timeline lang={lang} />
       </div>
+      <button className="btn btn-back" type="button" onClick={() => handleClick(changeToMain)}>{ lang ? 'Go back' : 'Regresar' }</button>
       <Footer />
     </div>
   );
