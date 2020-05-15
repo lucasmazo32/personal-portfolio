@@ -9,7 +9,7 @@ import Hobbies from '../component/Hobbies';
 
 const { changeToMain } = actions;
 
-function Bio({ changeToMain }) {
+function Bio({ changeToMain, lang }) {
   const handleClick = changeFunc => {
     changeFunc();
     window.scrollTo(0, 0);
@@ -19,9 +19,9 @@ function Bio({ changeToMain }) {
     <div className="bio">
       <button className="btn btn-back" type="button" onClick={() => handleClick(changeToMain)}>Go back</button>
       <div className="container-xl">
-        <Background />
-        <Hobbies />
-        <Timeline />
+        <Background lang={lang} />
+        <Hobbies lang={lang} />
+        <Timeline lang={lang} />
       </div>
       <Footer />
     </div>
@@ -30,6 +30,7 @@ function Bio({ changeToMain }) {
 
 Bio.propTypes = {
   changeToMain: PropTypes.func.isRequired,
+  lang: PropTypes.bool.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({

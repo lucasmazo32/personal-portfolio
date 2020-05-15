@@ -1,0 +1,27 @@
+@import "variables";
+
+.lang-container {
+  label {
+    background-color: white;
+    border: 1px solid $my-blue;
+    padding: 2px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:first-of-type {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-of-type {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+.lang-radio {
+  display: none;
+  &:checked + label {
+    background-color: $my-blue;
+    color: $page-bk;
+  }
+}

@@ -4,8 +4,8 @@ import games from '../assets/images/hobbies/games.png';
 import travel from '../assets/images/hobbies/travel.png';
 
 export default [
-  { img: cook, desc: 'Cooking' },
-  { img: games, desc: 'Playing videogames' },
-  { img: football, desc: 'American Football' },
-  { img: travel, desc: 'Travel' },
+  { img: cook, eng: 'Cooking', esp: 'Cocinar' },
+  { img: games, eng: 'Playing videogames', esp: 'Jugar videojuegos' },
+  { img: football, eng: 'American Football', esp: 'Fútbol Americano' },
+  { img: travel, eng: 'Travel', esp: 'Viajar' },
 ];

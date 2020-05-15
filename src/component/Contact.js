@@ -1,16 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Contact() {
+export default function Contact({ lang }) {
+  const eng = ['Contact Information', 'Phone number: ', 'Email adress: '];
+  const esp = ['Contacto', 'Celular: ', 'Correo: '];
+
   return (
     <div className="contact-container margin-containers">
-      <h2 className="title-under m-a">Contact Information</h2>
+      <h2 className="title-under m-a">{ lang ? eng[0] : esp[0] }</h2>
       <div className="contact-info">
         <span>
-          Phone number: &nbsp;
+          { lang ? eng[1] : esp[1] }
           <a href="tel: +57 3135364824">+57 313-536-4824</a>
         </span>
         <span>
-          Email adress: &nbsp;
+          { lang ? eng[2] : esp[2] }
           <a href="mailto: lucasmazo32@gmail.com">lucasmazo32@gmail.com</a>
         </span>
       </div>
@@ -28,3 +32,7 @@ export default function Contact() {
     </div>
   );
 }
+
+Contact.propTypes = {
+  lang: PropTypes.bool.isRequired,
+};

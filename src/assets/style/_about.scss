@@ -53,6 +53,20 @@
   }
 }
 
+.esp-sm {
+  display: flex;
+  span:last-of-type {
+    margin-left: 0.75rem;
+  }
+  @media screen and (max-width: 576px) {
+    flex-flow: column;
+    align-items: center;
+    span:last-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
 .more-info {
   position: relative;
   margin: 15px 0 10px 0;
@@ -67,7 +81,6 @@
   span {
     position: relative;
     left: 0%;
-    opacity: 1;
     transition: all 0.5s ease;
   }
   &::before {
@@ -85,26 +98,12 @@
     height: 100%;
     transition: all 0.5s ease;
   }
-  &::after {
-    content: 'More Info';
-    position: absolute;
-    color: $page-bk;
-    left: 0px;
-    overflow: hidden;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease;
-  }
   &:hover {
-    &::after {
-      opacity: 1;
-    }
     &::before {
       width: 100%;
     }
     span {
-      opacity: 0;
+      color: $page-bk;
     }
   }
 }

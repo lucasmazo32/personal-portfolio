@@ -1,21 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import projects from '../helper/projectContainer';
 
-const projectsToJSX = () => Object.keys(projects).map(pKey => (
+const projectsToJSX = lang => Object.keys(projects).map(pKey => (
   <div key={pKey} className="project-container margin-containers">
     <div className="img-container" style={{ backgroundImage: `url(${projects[pKey].image})` }}><span className="img-dec" /></div>
     <div className="info-container">
-      <h3>{projects[pKey].title}</h3>
-      <p>{ projects[pKey].text }</p>
+      <h3>{ lang ? projects[pKey].title : projects[pKey].titulo }</h3>
+      <p>{ lang ? projects[pKey].eng : projects[pKey].esp }</p>
       <div className="icons">
-        Built with:&nbsp;
+        { lang ? 'Built with: ' : 'Creado con: ' }
         {
             projects[pKey].icons.map(iconURL => <img src={iconURL} key={iconURL} alt="icon" />)
           }
       </div>
       <div className="buttons">
         <a href={projects[pKey].refs[0]} target="_blank" rel="noopener noreferrer" className="btn btn-links" type="button">
-          Live Version &nbsp;
+          { lang ? 'Live version' : 'Versión en vivo' }
+          &nbsp;
           <i className="fas fa-external-link-alt"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" className="svg-inline--fa fa-external-link-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z" /></svg></i>
         </a>
         <a href={projects[pKey].refs[1]} target="_blank" rel="noopener noreferrer" className="btn btn-links" type="button">
@@ -28,11 +30,15 @@ const projectsToJSX = () => Object.keys(projects).map(pKey => (
   </div>
 ));
 
-export default function Projects() {
+export default function Projects({ lang }) {
   return (
     <div className="margin-containers projects">
-      <h2 className="m-a title-under">Projects</h2>
-      { projectsToJSX() }
+      <h2 className="m-a title-under">{ lang ? 'Projects' : 'Proyectos' }</h2>
+      { projectsToJSX(lang) }
     </div>
   );
 }
+
+Projects.propTypes = {
+  lang: PropTypes.bool.isRequired,
+};
