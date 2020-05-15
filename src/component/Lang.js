@@ -7,15 +7,25 @@ import actions from '../actions/index';
 const { langEnglish, langSpanish } = actions;
 
 function Lang({ lang, langEnglish, langSpanish }) {
+  const toSpa = () => {
+    localStorage.setItem('defLang', 'esp');
+    langSpanish();
+  };
+
+  const toEng = () => {
+    localStorage.setItem('defLang', 'eng');
+    langEnglish();
+  };
+
   return (
     <div className="lang-container">
       { lang
-        ? <input type="radio" id="eng" value="eng" onClick={langEnglish} className="lang-radio" name="lang" defaultChecked />
-        : <input type="radio" id="eng" value="eng" onClick={langEnglish} className="lang-radio" name="lang" /> }
+        ? <input type="radio" id="eng" value="eng" onClick={toEng} className="lang-radio" name="lang" defaultChecked />
+        : <input type="radio" id="eng" value="eng" onClick={toEng} className="lang-radio" name="lang" /> }
       <label htmlFor="eng">ENG</label>
       { lang
-        ? <input type="radio" id="esp" value="esp" onClick={langSpanish} className="lang-radio" name="lang" />
-        : <input type="radio" id="esp" value="esp" onClick={langSpanish} className="lang-radio" name="lang" defaultChecked /> }
+        ? <input type="radio" id="esp" value="esp" onClick={toSpa} className="lang-radio" name="lang" />
+        : <input type="radio" id="esp" value="esp" onClick={toSpa} className="lang-radio" name="lang" defaultChecked /> }
       <label htmlFor="esp">ESP</label>
     </div>
   );

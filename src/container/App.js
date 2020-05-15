@@ -5,54 +5,37 @@ import Standard from './Standard';
 import FirstTime from '../component/FirstTime';
 import actions from '../actions/index';
 
-const { changeToLang, changeToMain } = actions;
+const { langSpanish } = actions;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.props = props;
     this.firstTime = localStorage.getItem('defLang');
-    this.chooseRender = this.chooseRender.bind(this);
   }
 
-  chooseRender() {
-    const { page, changeToMain } = this.props;
-    switch (page) {
-      case 'lang':
-        return <FirstTime changeToMain={() => changeToMain} />;
-      default:
-        return <Standard />;
+  // eslint-disable-next-line camelcase
+  UNSAFE_componentWillMount() {
+    const { langSpanish } = this.props;
+    if (this.firstTime !== null && this.firstTime === 'esp') {
+      langSpanish();
     }
   }
 
   render() {
-    const { changeToLang } = this.props;
-    (() => {
-      if (this.firstTime === null) {
-        changeToLang();
-      }
-    })();
     return (
       <div>
-        { this.chooseRender() }
+        { this.firstTime === null ? <FirstTime /> : <Standard /> }
       </div>
     );
   }
 }
 
 App.propTypes = {
-  changeToLang: PropTypes.func.isRequired,
-  page: PropTypes.string.isRequired,
-  changeToMain: PropTypes.func.isRequired,
+  langSpanish: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
-  changeToLang: page => dispatch(changeToLang(page)),
-  changeToMain: page => dispatch(changeToMain(page)),
+  langSpanish: lang => dispatch(langSpanish(lang)),
 });
 
-const mapStateToProps = ({ pageReducer: page }) => ({
-  page,
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

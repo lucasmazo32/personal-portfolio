@@ -1,20 +1,15 @@
 /* eslint-disable max-len */
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import actions from '../actions/index';
 
-const { langEnglish, langSpanish } = actions;
-
-function FirstTime({ langEnglish, langSpanish, changeToMain }) {
+function FirstTime() {
   const toSpa = () => {
-    langSpanish();
-    changeToMain();
+    localStorage.setItem('defLang', 'esp');
+    window.location.reload();
   };
 
   const toEng = () => {
-    langEnglish();
-    changeToMain();
+    localStorage.setItem('defLang', 'eng');
+    window.location.reload();
   };
 
   return (
@@ -33,15 +28,4 @@ function FirstTime({ langEnglish, langSpanish, changeToMain }) {
   );
 }
 
-FirstTime.propTypes = {
-  langEnglish: PropTypes.func.isRequired,
-  langSpanish: PropTypes.func.isRequired,
-  changeToMain: PropTypes.func.isRequired,
-};
-
-const mapDispatchToProps = dispatch => ({
-  langEnglish: lang => dispatch(langEnglish(lang)),
-  langSpanish: lang => dispatch(langSpanish(lang)),
-});
-
-export default connect(null, mapDispatchToProps)(FirstTime);
+export default FirstTime;
