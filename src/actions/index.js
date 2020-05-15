@@ -1,6 +1,9 @@
 const action = {
   CHANGE_TO_MAIN: 'MAIN',
   CHANGE_TO_BIO: 'BIO',
+  CHANGE_TO_LANG: 'LANG',
+  ENG: 'ENG',
+  ESP: 'ESP',
 };
 
 const changeToMain = () => ({
@@ -11,4 +14,18 @@ const changeToBio = () => ({
   type: action.CHANGE_TO_BIO,
 });
 
-export default { action, changeToBio, changeToMain };
+const changeToLang = () => ({
+  type: action.CHANGE_TO_LANG,
+});
+
+const langSpanish = () => ({
+  type: action.ESP,
+});
+
+const langEnglish = () => ({
+  type: action.ENG,
+});
+
+export default {
+  action, changeToBio, changeToMain, changeToLang, langEnglish, langSpanish,
+};

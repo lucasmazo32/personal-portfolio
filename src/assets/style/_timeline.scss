@@ -1,0 +1,74 @@
+@import "variables";
+
+$img-s: 80px;
+$time-p-top: 20px;
+$dot-size: 5px;
+$time-blue: #47A8BD;
+
+@media screen and (min-width: 992px) {
+  
+}
+
+.timeline-element {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  padding: $time-p-top 0;
+  @media screen and (min-width: 992px) {
+    margin: 0 5%;
+  }
+  &::before {
+    display: block;
+    border-radius: 50%;
+    top: $time-p-top/3;
+    left: $img-s/2 - $dot-size/2;
+    width: $dot-size;
+    height: $dot-size;
+    background-color: $time-blue;
+    position: absolute;
+    content: "";
+  }
+  &::after {
+    display: block;
+    border-radius: 50%;
+    bottom: $time-p-top/3;
+    left: $img-s/2 + - $dot-size/2;
+    width: $dot-size;
+    height: $dot-size;
+    background-color: $time-blue;
+    position: absolute;
+    content: "";
+  }
+  &:first-of-type {
+    &::before {
+      display: none;
+    }
+  }
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.timeline-year {
+  width: $img-s;
+  text-align: center;
+}
+
+.timeline-desc {
+  padding-left: 20px;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.timeline-wrap {
+  display: flex;
+  align-items: center;
+  img {
+    width: $img-s;
+    height: $img-s;
+    background-color: $time-blue;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,190 @@
+@import "variables";
+
+// projects 
+
+.projects {
+  h2 {
+    text-align: center;
+  }
+}
+
+// project
+
+.project-container {
+  background-color: $my-blue;
+  box-shadow: 0px 0px 4px 0px white;
+  color: $page-bk;
+  display: flex;
+  height: 300px;
+  border-radius: 10px;
+  @media screen and (max-width: 768px) {
+    flex-flow: column;
+    height: calc(400px + 30vw);
+  }
+  .img-container {
+    position: relative;
+    display: block;
+    margin: 40px 0 40px 40px;
+    @media screen and (max-width: 768px) {
+      margin: 40px;
+    }
+    @media screen and (max-width: 576px) {
+      margin: 10px;
+    }
+
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .img-dec {
+      position: absolute;
+      border-bottom: solid 1px $page-bk;
+      transform: rotate(-45deg)translate(-35px, -40px);
+      width: 100px;
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        border-bottom: solid 1px $page-bk;
+        transform: translate(12.5px, 10px);
+        width: 75px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: solid 1px $page-bk;
+        transform: translate(25px, 20px);
+        width: 50px;
+      }
+    }
+  }
+
+  .info-container {
+    flex-basis: 60%;
+    @media screen and (max-width: 768px) {
+      flex-basis: content;
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 576px) {
+      flex-basis: content;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 40px;
+    p {
+      text-align: justify;
+    }
+    p, h3 {
+      margin: 0 0 0 .75rem;
+      @media screen and (max-width: 768px) {
+        margin: 0;
+      }
+    }
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .info-dec {
+    position: absolute;
+    border-bottom: solid 1px $page-bk;
+    transform: rotate(45deg)translate(35px, 18px);
+    right: 0;
+    top: 0;
+    width: 100px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: solid 1px $page-bk;
+      transform: translate(12.5px, 10px);
+      width: 75px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: solid 1px $page-bk;
+      transform: translate(25px, 20px);
+      width: 50px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    i {
+      width: $btn-icon;
+      height: $btn-icon;
+    }
+    svg {
+      width: $btn-icon;
+      vertical-align: top;
+    }
+    .btn-links {
+      display: flex;
+      color: $page-bk;
+      align-items: center;
+      transition: all 0.5s ease;
+      margin-right: 1rem;
+      @media screen and (max-width: 768px) {
+        color: $my-blue;
+        background-color: $page-bk;
+      }
+      &:hover {
+        color: $my-blue;
+        background-color: $page-bk;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    box-shadow: 0px 0px 4px 0px $my-blue;
+    background-color: #ffffff;
+    color: black;
+    .img-dec, .info-dec {
+      border-bottom: solid 1px $my-blue;
+      &::before {
+        border-bottom: solid 1px $my-blue;
+      }
+      &::after {
+        border-bottom: solid 1px $my-blue;
+      }
+    }
+    .btn-links {
+      color: black;
+      @media screen and (max-width: 768px) {
+        color: $page-bk;
+        background-color: $my-blue;
+      }
+      &:hover {
+        color: $page-bk;
+        background-color: $my-blue;
+      }
+    }
+  }
+}
+
+.icons {
+  margin: 1rem 0;
+  margin-left: 0.75rem;
+  @media screen and (max-width: 768px) {
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  img {
+    padding-left: 0.5rem;
+    height: 30px;
+    @media screen and (max-width: 768px) {
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  }
+}

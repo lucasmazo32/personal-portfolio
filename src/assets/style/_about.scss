@@ -1,0 +1,135 @@
+@import "variables";
+
+// about 
+
+.about {
+  background-color: #fff;
+  display: flex;
+  box-shadow: 0px 0px 4px 0px $my-blue;
+  border-radius: 4px;
+  padding: 10px;
+  @media screen and (max-width: 768px) {
+    flex-flow: column;
+  }
+}
+
+.personal-info {
+  display: flex;
+  flex-basis: 40%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    font-family: $font;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+
+.about-division {
+  display: block;
+  width: 1px;
+  background-color: $my-blue;
+  margin: 20px 10px;
+  @media screen and (max-width: 768px) {
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+.about-mt {
+  margin-top: 10px;
+}
+
+.about-info {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  align-items: center;
+  @media screen and (max-width: 576px){
+    font-size: 4.3vw;
+  }
+}
+
+.esp-sm {
+  display: flex;
+  span:last-of-type {
+    margin-left: 0.75rem;
+  }
+  @media screen and (max-width: 576px) {
+    flex-flow: column;
+    align-items: center;
+    span:last-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.more-info {
+  position: relative;
+  margin: 15px 0 10px 0;
+  font-size: 1.3rem;
+  @media screen and (max-width: 992px) {
+    font-size: 1.2rem;
+    background: $my-blue;
+    color: $page-bk;
+  }
+  transition: all 0.5s ease;
+  padding: 5px;
+  span {
+    position: relative;
+    left: 0%;
+    transition: all 0.5s ease;
+  }
+  &::before {
+    content: '';
+    border-radius: 5px;
+    position: absolute;
+    background-color: $my-blue;
+    top: 0px;
+    left: 0px;
+    display: block;
+    border-top: 1px solid $my-blue;
+    border-bottom: 1px solid $my-blue;
+    z-index: 0;
+    width: 0%;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+    span {
+      color: $page-bk;
+    }
+  }
+}
+
+.skills-desk {
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
+}
+
+.skills-phone {
+  display: none;
+  svg {
+    height: 25px;
+    vertical-align: top;
+  }
+  .react {
+    color: #00D8FF;
+  }
+  .js {
+    color: #F5DE19;
+    background: linear-gradient(rgb(241, 247, 237) 0%, rgb(241, 247, 237) 20%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 87%, rgb(241, 247, 237) 87%, rgb(241, 247, 237) 100%);
+  }
+  @media screen and (max-width: 576px){
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

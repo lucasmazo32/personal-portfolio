@@ -1,0 +1,57 @@
+@import "variables";
+
+// contact information
+
+.contact-container {
+  margin-bottom: 30px;
+  h2 {
+    margin-bottom: 10px;
+  }
+  span {
+    padding: 0 0 10px 0;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  a {
+    color: #4B4E6D;
+  }
+}
+
+$icon-time: 0.75s;
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0 10px;
+    color: #4B4E6D;
+    transition: all 0.7s ease;
+  }
+  svg {
+    width: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    .github {
+      color: black;
+    }
+    .linkedin {
+      color: #0077B5;
+    }
+    .twitter {
+      color: #1DA1F2;
+    }
+  }
+  .github:hover {
+    color: black;
+  }
+  .linkedin:hover {
+    color: #0077B5;
+  }
+  .twitter:hover {
+    color: #1DA1F2;
+  }
+}
