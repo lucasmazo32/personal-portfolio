@@ -952,10 +952,12 @@ footer {
   padding: 2px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  margin-bottom: 0;
   cursor: pointer;
 }
 
 .lang-container label:first-of-type {
+  margin-left: 0.75rem;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }

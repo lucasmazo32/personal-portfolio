@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Main from './Main';
 import Bio from './Bio';
-import Lang from '../component/Lang';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +16,6 @@ class App extends React.Component {
 
     return (
       <div>
-        <Lang lang={lang} />
         { page
           ? <Main lang={lang} />
           : <Bio lang={lang} /> }

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function Background({ lang }) {
   return (
     <div className="background-info">
-      <h2 className="title-under m-a">Background</h2>
+      <h2 className="title-under m-a">{ lang ? 'Background' : 'Historia' }</h2>
       <p>
         { lang
           ? 'When I finished school, I had a variety of choices to study at the university because I loved maths, physics, and programming. I finally ended up choosing Mechanical Engineering.'

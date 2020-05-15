@@ -6,8 +6,10 @@
     border: 1px solid $my-blue;
     padding: 2px;
     transition: all 0.5s ease;
+    margin-bottom: 0;
     cursor: pointer;
     &:first-of-type {
+      margin-left: 0.75rem;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
     }
