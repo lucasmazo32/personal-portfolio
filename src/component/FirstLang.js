@@ -1,19 +1,26 @@
 /* eslint-disable max-len */
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import actions from '../actions/index';
 
-function FirstTime() {
+const { langEnglish, langSpanish } = actions;
+
+function FirstLang({ clickFn, langEnglish, langSpanish }) {
   const toSpa = () => {
     localStorage.setItem('defLang', 'esp');
-    window.location.reload();
+    langSpanish();
+    clickFn();
   };
 
   const toEng = () => {
     localStorage.setItem('defLang', 'eng');
-    window.location.reload();
+    langEnglish();
+    clickFn();
   };
 
   return (
-    <div className="container-xl first-time">
+    <div className="first-time">
       <div role="button" onClick={toSpa} onKeyUp={toSpa} tabIndex={0}>
         <h2>¡Bienvenido!</h2>
         <span>Para acceder al portafolio en Español, presiona en este cuadro.</span>
@@ -28,4 +35,18 @@ function FirstTime() {
   );
 }
 
-export default FirstTime;
+FirstLang.propTypes = {
+  clickFn: PropTypes.func.isRequired,
+};
+
+FirstLang.propTypes = {
+  langEnglish: PropTypes.func.isRequired,
+  langSpanish: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = dispatch => ({
+  langEnglish: lang => dispatch(langEnglish(lang)),
+  langSpanish: lang => dispatch(langSpanish(lang)),
+});
+
+export default connect(null, mapDispatchToProps)(FirstLang);

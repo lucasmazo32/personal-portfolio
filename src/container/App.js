@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Standard from './Standard';
-import FirstTime from '../component/FirstTime';
+import FirstTime from './FirstTime';
 import actions from '../actions/index';
 
 const { langSpanish } = actions;
@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   // eslint-disable-next-line camelcase
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     const { langSpanish } = this.props;
     if (this.firstTime !== null && this.firstTime === 'esp') {
       langSpanish();
