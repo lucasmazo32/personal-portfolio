@@ -2,28 +2,42 @@
 import React from 'react';
 import FirstLang from '../component/FirstLang';
 import FirstInteractive from '../component/FirstInteractive';
+import Interactive from './Interactive';
 
 class FirstTime extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.chooseView = this.chooseView.bind(this);
     this.state = {
-      langView: true,
+      langView: 'fLang',
     };
   }
 
-  handleClick() {
+  handleClick(view) {
     this.setState({
-      langView: false,
+      langView: view,
     });
   }
 
-  render() {
+  chooseView() {
     const { langView } = this.state;
+    switch (langView) {
+      case 'fLang':
+        return <FirstLang clickFn={() => this.handleClick('fInt')} />;
+      case 'fInt':
+        return <FirstInteractive clickFn={() => this.handleClick('IntComp')} />;
+      case 'IntComp':
+        return <Interactive />;
+      default:
+        return null;
+    }
+  }
 
+  render() {
     return (
       <div className="container-xl">
-        { langView ? <FirstLang clickFn={() => this.handleClick()} /> : <FirstInteractive /> }
+        { this.chooseView() }
       </div>
     );
   }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1154,6 +1155,17 @@ footer {
     border-left: 0;
     border-top: 1px solid white;
   }
+}
+
+.cli {
+  font-family: 'Ubuntu Mono', monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
 body {
