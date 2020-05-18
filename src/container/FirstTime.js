@@ -2,7 +2,6 @@
 import React from 'react';
 import FirstLang from '../component/FirstLang';
 import FirstInteractive from '../component/FirstInteractive';
-import Interactive from './Interactive';
 
 class FirstTime extends React.Component {
   constructor(props) {
