@@ -1287,9 +1287,23 @@ footer {
           transform: rotate(45deg) translate(8.49px);
 }
 
+@media screen and (min-width: 992px) {
+  .menu .bar-1 {
+    -webkit-transform: rotate(45deg) translate(9.9px);
+            transform: rotate(45deg) translate(9.9px);
+  }
+}
+
 .menu .bar-3 {
   -webkit-transform: rotate(-45deg) translate(8.49px);
           transform: rotate(-45deg) translate(8.49px);
+}
+
+@media screen and (min-width: 992px) {
+  .menu .bar-3 {
+    -webkit-transform: rotate(-45deg) translate(9.9px);
+            transform: rotate(-45deg) translate(9.9px);
+  }
 }
 
 .btn-inter {

@@ -23,6 +23,7 @@ class Interactive extends React.Component {
       cliInfo: [
         ['Type "actions -h" or "actions help" to see more commands.', 'Escribe "acciones -h" o "acciones help" para ver más comandos.'],
         ['Type "clear" to erase everything in this terminal.', 'Escribe "limpiar" para borrar lo que hay en esta terminal.'],
+        ['Do not forget to type "contact" at the end!', 'No te olvides de escribir "contacto" al final!'],
       ],
       view: '',
     };

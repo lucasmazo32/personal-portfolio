@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+* [About the Project](#about-the-project)
+* [Live version](#live-version)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-In the project directory, you can run:
+<!-- about-the-project -->
+# About the project
 
-### `yarn start`
+The portfolio is a personal project to showcase my abilities in programming. I created this project using React and Redux, and the code is modularized to expand in the future.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It has a language feature in which you can choose between English or Spanish.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+It has another feature in which you can interact with a terminal with some basic commands to display the information requested. You can change between interactive and standard views as much as you want. Type contact in the terminal so you can see cool stuff.
 
-### `yarn test`
+## Live version
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> [Here](//tobedefined)
 
-### `yarn build`
+## Built with
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node v14.0.0
+- npm v6.14.5
+- React
+- Redux
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Getting started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running follow these simple steps.
 
-### `yarn eject`
+Clone or fork the [repository](https://github.com/lucasmazo32/personal-portfolio).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+After clonning and changing directory, run in your terminal:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> ``` npm install ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To start the local server (webpack), run in your terminal:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> ``` npm start ```
 
-## Learn More
+If you want to build the production files for the project, run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> ``` npm run build ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# License
 
-### Code Splitting
+> MIT
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Contact
 
-### Analyzing the Bundle Size
+Lucas Mazo:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Twitter: [@lucasmazo32](https://twitter.com/lucasmazo32)
+- Github: [lucasmazo32](https://github.com/lucasmazo32)
+- LinkedIn: [Lucas Mazo](https://www.linkedin.com/in/lucasmazo/)
 
-### Making a Progressive Web App
+# Acknowledgements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- Icons8: [Icons8](https://icons8.com/)
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- FontAwesome: [FontAwesome](https://fontawesome.com/)

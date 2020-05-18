@@ -45,9 +45,15 @@
   }
   .bar-1 {
     transform: rotate(45deg)translate(8.49px);
+    @media screen and (min-width: 992px) {
+      transform: rotate(45deg)translate(9.9px);
+    }
   }
   .bar-3 {
     transform: rotate(-45deg)translate(8.49px);
+    @media screen and (min-width: 992px) {
+      transform: rotate(-45deg)translate(9.9px);
+    }
   }
 }
 

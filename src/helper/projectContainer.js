@@ -51,8 +51,8 @@ const projectContainer = {
       sass,
     ],
     refs: [
-      'https://lucasmazo32.github.io/march-game/',
-      'https://github.com/lucasmazo32/march-game',
+      '/',
+      'https://github.com/lucasmazo32/personal-portfolio',
     ],
   },
 };
