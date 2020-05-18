@@ -19,7 +19,7 @@ It has another feature in which you can interact with a terminal with some basic
 
 ## Live version
 
-> [Here](//tobedefined)
+> [Here](https://5ec30ab61ad7a65a0c5455f1--lucas-portafolio.netlify.app/)
 
 ## Built with
 

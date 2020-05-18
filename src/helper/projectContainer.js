@@ -51,7 +51,7 @@ const projectContainer = {
       sass,
     ],
     refs: [
-      '/',
+      'https://5ec30ab61ad7a65a0c5455f1--lucas-portafolio.netlify.app/',
       'https://github.com/lucasmazo32/personal-portfolio',
     ],
   },
