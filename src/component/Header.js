@@ -7,7 +7,9 @@ import hat from '../assets/images/hat.png';
 
 const { changeToInt, changeToMain } = actions;
 
-function Header({ lang, menu, changeToInt, changeToMain }) {
+function Header({
+  lang, menu, changeToInt, changeToMain,
+}) {
   const esp = ['Diseñando mi camino', 'para Full-Stack Development'];
   const eng = ['Engineering my way', 'to Full-Stack Development'];
   const interactive = [['Interactive', 'Interactiva'], ['Standard', 'Estándar']];
@@ -19,6 +21,11 @@ function Header({ lang, menu, changeToInt, changeToMain }) {
     } else {
       changeToMain();
     }
+  };
+
+  const handleMenu = () => {
+    const menu = document.querySelector('#menu');
+    menu.classList.toggle('closed');
   };
 
   return (
@@ -33,9 +40,13 @@ function Header({ lang, menu, changeToInt, changeToMain }) {
         </h1>
         <img src={hat} alt="wrench" className="hat" />
       </div>
-      <div className="menu closed">
-        <button type="button">{'<'}</button>
-        <button type="button" onClick={handleClick}>{ lang ? intText[0] : intText[1] }</button>
+      <div id="menu" className="menu closed">
+        <button className="btn btn-bar bar-container" type="button" onClick={handleMenu}>
+          <span className="bar-1 bar" />
+          <span className="bar-2 bar" />
+          <span className="bar-3 bar" />
+        </button>
+        <button className="btn btn-inter" type="button" onClick={handleClick}>{ lang ? intText[0] : intText[1] }</button>
       </div>
     </div>
   );
