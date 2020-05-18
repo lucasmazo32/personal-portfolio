@@ -730,10 +730,6 @@
   }
 }
 
-.contact-container {
-  margin-bottom: 30px;
-}
-
 .contact-container h2 {
   margin-bottom: 10px;
 }
@@ -809,6 +805,7 @@ footer {
   display: flex;
   font-size: 0.75rem;
   width: 100%;
+  margin-top: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1158,6 +1155,8 @@ footer {
 }
 
 .cli {
+  display: block;
+  overflow-y: scroll;
   font-family: 'Ubuntu Mono', monospace;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1166,6 +1165,48 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  height: 200px;
+  background-color: #0f0f0f;
+  padding: 5px;
+  color: white;
+}
+
+.cli a {
+  color: #6969b3;
+}
+
+.cli .github svg, .cli .linkedin svg, .cli .twitter svg {
+  height: 1rem;
+}
+
+.cli .github {
+  color: white;
+}
+
+.cli .linkedin {
+  color: #0077B5;
+}
+
+.cli .twitter {
+  color: #1DA1F2;
+}
+
+.input-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-field input {
+  background-color: #0f0f0f;
+  border: 0;
+  color: white;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 body {

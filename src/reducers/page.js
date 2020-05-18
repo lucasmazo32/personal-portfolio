@@ -3,7 +3,7 @@ import actions from '../actions/index';
 const { action } = actions;
 const { CHANGE_TO_BIO, CHANGE_TO_MAIN, CHANGE_TO_INT } = action;
 
-const pageReducer = (state = 'int', action) => {
+const pageReducer = (state = 'main', action) => {
   switch (action.type) {
     case CHANGE_TO_MAIN:
       return 'main';

@@ -20,7 +20,7 @@ class Standard extends React.Component {
       case 'bio':
         return <Bio lang={lang} />;
       case 'int':
-        return <Interactive lang={lang} />;
+        return <Interactive lang={lang} menu={false} />;
       default:
         return null;
     }
