@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-function FirstInteractive({ lang, clickFn }) {
+function FirstInteractive({ lang }) {
   const eng = ['You will have a place where you type simple commands and display the information you requested.', 'You can change to the standard version on the webpage.', 'All the information will be available to you.', 'You can change to the interactive version on the webpage.'];
   const esp = ['Podrás escribir simples comandos los cuales mostrarán la información solicitada.', 'Puedes cambiar a la forma estándar en la página.', 'Toda la información estará disponible para ti.', 'Puedes cambiar a la forma interactiva en la página.'];
 
@@ -12,7 +12,8 @@ function FirstInteractive({ lang, clickFn }) {
   };
 
   const interactive = () => {
-    clickFn();
+    localStorage.setItem('page', 'int');
+    window.location.reload();
   };
   return (
     <div className="first-interactive">
@@ -35,7 +36,6 @@ function FirstInteractive({ lang, clickFn }) {
 
 FirstInteractive.propTypes = {
   lang: PropTypes.bool.isRequired,
-  clickFn: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = ({ langReducer: lang }) => ({

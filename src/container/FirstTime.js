@@ -26,9 +26,7 @@ class FirstTime extends React.Component {
       case 'fLang':
         return <FirstLang clickFn={() => this.handleClick('fInt')} />;
       case 'fInt':
-        return <FirstInteractive clickFn={() => this.handleClick('IntComp')} />;
-      case 'IntComp':
-        return <Interactive />;
+        return <FirstInteractive />;
       default:
         return null;
     }
