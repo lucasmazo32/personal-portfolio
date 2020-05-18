@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 .header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -729,10 +731,6 @@
   }
 }
 
-.contact-container {
-  margin-bottom: 30px;
-}
-
 .contact-container h2 {
   margin-bottom: 10px;
 }
@@ -808,6 +806,7 @@ footer {
   display: flex;
   font-size: 0.75rem;
   width: 100%;
+  margin-top: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1154,6 +1153,164 @@ footer {
     border-left: 0;
     border-top: 1px solid white;
   }
+}
+
+.cli {
+  display: block;
+  overflow-y: scroll;
+  font-family: 'Ubuntu Mono', monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 200px;
+  background-color: #0f0f0f;
+  padding: 5px;
+  color: white;
+}
+
+.cli a {
+  color: #6969b3;
+}
+
+.cli .github svg, .cli .linkedin svg, .cli .twitter svg {
+  height: 1rem;
+}
+
+.cli .github {
+  color: white;
+}
+
+.cli .linkedin {
+  color: #0077B5;
+}
+
+.cli .twitter {
+  color: #1DA1F2;
+}
+
+.input-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-field input {
+  background-color: #0f0f0f;
+  border: 0;
+  color: white;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: calc(40% - 40px);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .menu {
+    top: calc(40% - 30px);
+  }
+}
+
+.menu .btn-inter {
+  pointer-events: inherit;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100px;
+}
+
+.menu .btn-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  padding: 0;
+}
+
+.menu .bar {
+  display: block;
+  height: 2px;
+  width: 24px;
+  background-color: #427AA3;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 776px) {
+  .menu .bar {
+    height: 2.5px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .menu .bar {
+    height: 3px;
+  }
+}
+
+.menu .bar-1, .menu .bar-2 {
+  margin-bottom: 4px;
+}
+
+.menu .bar-2 {
+  opacity: 0;
+}
+
+.menu .bar-1 {
+  -webkit-transform: rotate(45deg) translate(8.49px);
+          transform: rotate(45deg) translate(8.49px);
+}
+
+.menu .bar-3 {
+  -webkit-transform: rotate(-45deg) translate(8.49px);
+          transform: rotate(-45deg) translate(8.49px);
+}
+
+.btn-inter {
+  color: #427AA3;
+}
+
+.menu.closed .btn-inter {
+  padding-left: 0;
+  width: 0;
+  padding-right: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.menu.closed .bar-2 {
+  opacity: 1;
+}
+
+.menu.closed .bar-1, .menu.closed .bar-3 {
+  -webkit-transform: none;
+          transform: none;
 }
 
 body {

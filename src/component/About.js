@@ -6,7 +6,7 @@ import actions from '../actions/index';
 
 const { changeToBio } = actions;
 
-function About({ changeToBio, lang }) {
+function About({ changeToBio, lang, interactive }) {
   const handleClick = changeFunc => {
     changeFunc();
     window.scrollTo(0, 0);
@@ -62,7 +62,7 @@ function About({ changeToBio, lang }) {
           </i>
         </div>
         <br />
-        <button type="button" className="more-info btn" onClick={() => handleClick(changeToBio)}><span>{ lang ? eng[4] : esp[4] }</span></button>
+        { interactive ? null : <button type="button" className="more-info btn" onClick={() => handleClick(changeToBio)}><span>{ lang ? eng[4] : esp[4] }</span></button>}
       </div>
     </div>
   );
@@ -71,6 +71,7 @@ function About({ changeToBio, lang }) {
 About.propTypes = {
   changeToBio: PropTypes.func.isRequired,
   lang: PropTypes.bool.isRequired,
+  interactive: PropTypes.bool.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({

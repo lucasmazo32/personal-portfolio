@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+.cli {
+  display: block;
+  overflow-y: scroll;
+  font-family: 'Ubuntu Mono', monospace;
+  display: flex;
+  flex-flow: column;
+  height: 200px;
+  background-color: #0f0f0f;
+  padding: 5px;
+  color: white;
+  a {
+    color: #6969b3;
+  }
+  .github, .linkedin, .twitter {
+    svg {
+      height: 1rem;
+    }
+  }
+  .github {
+    color: white;
+  }
+  .linkedin {
+    color: #0077B5;
+  }
+  .twitter {
+    color: #1DA1F2;
+  }
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  input {
+    background-color: #0f0f0f;
+    border: 0;
+    color: white;
+    flex-grow: 1;
+  }
+}

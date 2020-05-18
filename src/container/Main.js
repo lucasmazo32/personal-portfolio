@@ -6,12 +6,12 @@ import Projects from '../component/Projects';
 import Contact from '../component/Contact';
 import Footer from '../component/Footer';
 
-function Main({ lang }) {
+function Main({ lang, interactive }) {
   return (
     <div className="main">
-      <Header lang={lang} />
+      <Header lang={lang} menu />
       <div className="container-xl">
-        <About lang={lang} />
+        <About lang={lang} interactive={interactive} />
         <Projects lang={lang} />
         <Contact lang={lang} />
       </div>
@@ -22,6 +22,11 @@ function Main({ lang }) {
 
 Main.propTypes = {
   lang: PropTypes.bool.isRequired,
+  interactive: PropTypes.bool,
+};
+
+Main.defaultProps = {
+  interactive: false,
 };
 
 export default Main;

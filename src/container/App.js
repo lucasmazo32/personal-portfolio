@@ -23,9 +23,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        { this.firstTime === null ? <FirstTime /> : <Standard /> }
-      </div>
+      this.firstTime === null ? <FirstTime /> : <Standard />
     );
   }
 }

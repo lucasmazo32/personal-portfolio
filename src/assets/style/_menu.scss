@@ -1,0 +1,72 @@
+@import "variables";
+
+.menu {
+  display: flex;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: calc(40% - 40px);
+  @media screen and (max-width: 576px) {
+    top: calc(40% - 30px);
+  }
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  .btn-inter {
+    pointer-events: inherit;
+    transition: all 0.5s ease;
+    width: 100px;
+  }
+  .btn-bar {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 30px;
+    padding: 0;
+  }
+  .bar {
+    display: block;
+    @media screen and (min-width: 776px) {
+      height: 2.5px;
+    }
+    @media screen and (min-width: 992px) {
+      height: 3px;
+    }
+    height: 2px;
+    width: 24px;
+    background-color: $my-blue;
+    transition: all 0.5s ease;
+  }
+  .bar-1, .bar-2 {
+    margin-bottom: 4px;
+  }
+  .bar-2 {
+    opacity: 0;
+  }
+  .bar-1 {
+    transform: rotate(45deg)translate(8.49px);
+  }
+  .bar-3 {
+    transform: rotate(-45deg)translate(8.49px);
+  }
+}
+
+.btn-inter {
+  color: $my-blue;
+}
+
+.menu.closed {
+  .btn-inter {
+    padding-left: 0;
+    width: 0;
+    padding-right: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .bar-2 {
+    opacity: 1;
+  }
+  .bar-1, .bar-3 {
+    transform: none;
+  }
+}
