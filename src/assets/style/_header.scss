@@ -5,6 +5,7 @@
 .header {
   position: relative;
   display: flex;
+  overflow-x: hidden;
   flex-flow: column;
   align-items: center;
   padding: 0;
@@ -85,11 +86,11 @@
 @keyframes engineering {
   from {
     opacity: 0.1;
-    top: -50px;
+    transform: translateY(-50px);
   }
   to {
     opacity: 1;
-    top: 0px;
+    transform: translateY(0);
   }
 }
 

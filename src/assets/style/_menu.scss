@@ -5,6 +5,8 @@
   background-color: white;
   position: absolute;
   right: 0;
+  transform: translateX(0);
+  transition: 0.5s ease all;
   top: calc(40% - 40px);
   @media screen and (max-width: 576px) {
     top: calc(40% - 30px);
@@ -13,8 +15,6 @@
   border-bottom-left-radius: 20px;
   .btn-inter {
     pointer-events: inherit;
-    transition: all 0.5s ease;
-    width: 100px;
   }
   .btn-bar {
     display: flex;
@@ -62,11 +62,10 @@
 }
 
 .menu.closed {
+  transform: translateX(calc(100% - 30px));
   .btn-inter {
     padding-left: 0;
-    width: 0;
     padding-right: 0;
-    overflow: hidden;
     pointer-events: none;
   }
   .bar-2 {

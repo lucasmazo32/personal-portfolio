@@ -4,6 +4,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -122,22 +123,26 @@
 @-webkit-keyframes engineering {
   from {
     opacity: 0.1;
-    top: -50px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   to {
     opacity: 1;
-    top: 0px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes engineering {
   from {
     opacity: 0.1;
-    top: -50px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   to {
     opacity: 1;
-    top: 0px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -1217,6 +1222,10 @@ footer {
   background-color: white;
   position: absolute;
   right: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
   top: calc(40% - 40px);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1230,9 +1239,6 @@ footer {
 
 .menu .btn-inter {
   pointer-events: inherit;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  width: 100px;
 }
 
 .menu .btn-bar {
@@ -1310,11 +1316,14 @@ footer {
   color: #427AA3;
 }
 
+.menu.closed {
+  -webkit-transform: translateX(calc(100% - 30px));
+          transform: translateX(calc(100% - 30px));
+}
+
 .menu.closed .btn-inter {
   padding-left: 0;
-  width: 0;
   padding-right: 0;
-  overflow: hidden;
   pointer-events: none;
 }
 
@@ -1329,10 +1338,12 @@ footer {
 
 body {
   min-height: 100vh;
+  width: 100vw;
   background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
   background: linear-gradient(#dddddd 0%, #eeeeee 100%);
   background-repeat: no-repeat;
   font-family: 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 992px) {
