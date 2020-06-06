@@ -12,8 +12,8 @@ function Main({ lang, interactive }) {
       <Header lang={lang} menu />
       <div className="container-xl">
         <About lang={lang} interactive={interactive} />
-        <Projects lang={lang} />
         <Contact lang={lang} />
+        <Projects lang={lang} />
       </div>
       <Footer lang={lang} />
     </div>

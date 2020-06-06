@@ -1,25 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import actions from '../actions/index';
+import { useHistory } from 'react-router-dom';
 import wrench from '../assets/images/wrench.png';
 import hat from '../assets/images/hat.png';
 
-const { changeToInt, changeToMain } = actions;
-
-function Header({
-  lang, menu, changeToInt, changeToMain,
+export default function Header({
+  lang, menu,
 }) {
   const esp = ['Diseñando mi camino', 'para Full-Stack Development'];
   const eng = ['Engineering my way', 'to Full-Stack Development'];
   const interactive = [['Interactive', 'Interactiva'], ['Standard', 'Estándar']];
   const intText = menu ? interactive[0] : interactive[1];
 
+  const history = useHistory();
+
   const handleClick = () => {
     if (menu) {
-      changeToInt();
+      history.push('/interactive');
     } else {
-      changeToMain();
+      history.push('/');
     }
   };
 
@@ -55,13 +54,4 @@ function Header({
 Header.propTypes = {
   lang: PropTypes.bool.isRequired,
   menu: PropTypes.bool.isRequired,
-  changeToInt: PropTypes.func.isRequired,
-  changeToMain: PropTypes.func.isRequired,
 };
-
-const mapDispatchToProps = dispatch => ({
-  changeToInt: page => dispatch(changeToInt(page)),
-  changeToMain: page => dispatch(changeToMain(page)),
-});
-
-export default connect(null, mapDispatchToProps)(Header);

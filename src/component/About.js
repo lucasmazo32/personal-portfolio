@@ -1,17 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import photo from '../assets/images/profile-photo.png';
-import actions from '../actions/index';
 
-const { changeToBio } = actions;
-
-function About({ changeToBio, lang, interactive }) {
-  const handleClick = changeFunc => {
-    changeFunc();
-    window.scrollTo(0, 0);
-  };
-
+export default function About({ lang, interactive }) {
   const esp = ['Ubicación', 'Dispuesto a trabajar remoto', 'Dispuesto a reubicarse', 'Habilidades', 'Ver más'];
   const eng = ['Location', 'Open to work remotely', 'Open to relocate', 'Skills', 'More info'];
 
@@ -62,20 +54,13 @@ function About({ changeToBio, lang, interactive }) {
           </i>
         </div>
         <br />
-        { interactive ? null : <button type="button" className="more-info btn" onClick={() => handleClick(changeToBio)}><span>{ lang ? eng[4] : esp[4] }</span></button>}
+        { interactive ? null : <Link to="/biography" className="more-info btn"><span>{ lang ? eng[4] : esp[4] }</span></Link>}
       </div>
     </div>
   );
 }
 
 About.propTypes = {
-  changeToBio: PropTypes.func.isRequired,
   lang: PropTypes.bool.isRequired,
   interactive: PropTypes.bool.isRequired,
 };
-
-const mapDispatchToProps = dispatch => ({
-  changeToBio: page => dispatch(changeToBio(page)),
-});
-
-export default connect(null, mapDispatchToProps)(About);
