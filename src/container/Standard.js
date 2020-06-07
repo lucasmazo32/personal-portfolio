@@ -1,5 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {
+  Switch,
+  Route,
+} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Main from './Main';
 import Bio from './Bio';
@@ -9,37 +13,31 @@ class Standard extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
-    this.handleView = this.handleView.bind(this);
-  }
-
-  handleView() {
-    const { page, lang } = this.props;
-    switch (page) {
-      case 'main':
-        return <Main lang={lang} />;
-      case 'bio':
-        return <Bio lang={lang} />;
-      case 'int':
-        return <Interactive lang={lang} menu={false} />;
-      default:
-        return null;
-    }
   }
 
   render() {
+    const { lang } = this.props;
     return (
-      this.handleView()
+      <Switch>
+        <Route exact path="/">
+          <Main lang={lang} />
+        </Route>
+        <Route path="/interactive">
+          <Interactive lang={lang} menu={false} />
+        </Route>
+        <Route path="/biography">
+          <Bio lang={lang} />
+        </Route>
+      </Switch>
     );
   }
 }
 
 Standard.propTypes = {
-  page: PropTypes.string.isRequired,
   lang: PropTypes.bool.isRequired,
 };
 
-const mapStateToProps = ({ pageReducer: page, langReducer: lang }) => ({
-  page,
+const mapStateToProps = ({ langReducer: lang }) => ({
   lang,
 });
 

@@ -726,13 +726,16 @@
 }
 
 .icons img {
-  padding-left: 0.5rem;
+  padding: 0.15rem;
+  border-radius: 50%;
+  background-color: #9a9a9a;
+  margin-left: 0.5rem;
   height: 30px;
 }
 
 @media screen and (max-width: 768px) {
   .icons img:first-of-type {
-    padding-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -1338,7 +1341,6 @@ footer {
 
 body {
   min-height: 100vh;
-  width: 100vw;
   background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
   background: linear-gradient(#dddddd 0%, #eeeeee 100%);
   background-repeat: no-repeat;

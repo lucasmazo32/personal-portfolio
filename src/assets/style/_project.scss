@@ -179,11 +179,14 @@
     }
   }
   img {
-    padding-left: 0.5rem;
+    padding: 0.15rem;
+    border-radius: 50%;
+    background-color: #9a9a9a;
+    margin-left: 0.5rem;
     height: 30px;
     @media screen and (max-width: 768px) {
       &:first-of-type {
-        padding-left: 0;
+        margin-left: 0;
       }
     }
   }
