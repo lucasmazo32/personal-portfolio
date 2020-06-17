@@ -5,8 +5,12 @@ $time-p-top: 20px;
 $dot-size: 5px;
 $time-blue: #47A8BD;
 
-@media screen and (min-width: 992px) {
-  
+@media screen and (min-width: 768px) {
+  .timeline {
+    margin: 0 auto;
+    width: 60%;
+    min-width: 600px;
+  }
 }
 
 .timeline-element {
