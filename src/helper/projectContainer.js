@@ -8,9 +8,25 @@ import jlt from '../assets/images/projects/jlt.jpeg';
 import march from '../assets/images/projects/march.png';
 import otp from '../assets/images/projects/otp.png';
 import hmmm from '../assets/images/projects/hmmm.png';
-import portfolio from '../assets/images/projects/portfolio.png';
+import dilution from '../assets/images/projects/dilution.png';
 
 const projectContainer = {
+  dilution: {
+    image: dilution,
+    title: 'Dilution',
+    titulo: '"Dilution"',
+    eng: '"Dilution" is a project designed and created by me, using UI and UX principles. It is a web application, and even though it works on all devices, it is designed exclusively for mobile. The page works using Spotify API, and it intends to help you find different songs that you may like.',
+    esp: '"Dilution" es un proyecto diseñado y creado por mí, usando principios de UI y UX. Es una página web diseñada únicamente para celulares (funciona para computador y tablet, pero no es la misma experiencia). La página funciona con el API de Spotify, y su propósito es ayudarte a encontrar canciones diferentes que te puedan gustar.',
+    icons: [
+      react,
+      redux,
+      sass,
+    ],
+    refs: [
+      'https://5ef4bb1bce77554c957b455b--dilution.netlify.app/',
+      'https://github.com/lucasmazo32/dilution',
+    ],
+  },
   hmmm: {
     image: hmmm,
     title: 'Hmmm',
@@ -57,22 +73,6 @@ const projectContainer = {
     refs: [
       'https://lucasmazo32.github.io/march-game/',
       'https://github.com/lucasmazo32/march-game',
-    ],
-  },
-  portfolio: {
-    image: portfolio,
-    title: 'Portfolio',
-    titulo: 'Portafolio',
-    eng: 'The portfolio is my project to showcase my abilities and present myself to anyone interested. The code that maintains this webpage is modularized and can be expanded in the future. I hope you had a good experience.',
-    esp: 'Portafolio es el proyecto para mostrar mis habilidades y presentarme ante cualquiera que esté interesado. El código de esta página está modularizado y puede ser expandido en el futuro. Espero que hayas tenido una buena experiencia.',
-    icons: [
-      react,
-      redux,
-      sass,
-    ],
-    refs: [
-      '/',
-      'https://github.com/lucasmazo32/personal-portfolio',
     ],
   },
   otp: {
