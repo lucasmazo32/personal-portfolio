@@ -11,6 +11,8 @@
 <!-- about-the-project -->
 # About the project
 
+![image](src/assets/images/projects/portfolio.png)
+
 The portfolio is a personal project to showcase my abilities in programming. I created this project using React and Redux, and the code is modularized to expand in the future.
 
 It has a language feature in which you can choose between English or Spanish.
