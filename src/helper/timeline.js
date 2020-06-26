@@ -1,4 +1,3 @@
-import baby from '../assets/images/timeline/baby.png';
 import book from '../assets/images/timeline/book.png';
 import compBook from '../assets/images/timeline/comp-book.png';
 import canada from '../assets/images/timeline/canada.png';
@@ -7,9 +6,6 @@ import graduate from '../assets/images/timeline/graduate.png';
 import laptop from '../assets/images/timeline/laptop.png';
 
 const timeline = [
-  {
-    year: 1997, img: baby, eng: 'I was born', esp: 'Nací',
-  },
   {
     year: 2012, img: canada, eng: 'I studied English in Canada for six months', esp: 'Estudié inglés en Canadá por seis meses',
   },

@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import wrench from '../assets/images/wrench.png';
-import hat from '../assets/images/hat.png';
 
 export default function Header({
   lang, menu,
 }) {
-  const esp = ['Diseñando mi camino', 'para Full-Stack Development'];
+  const esp = ['Diseñando mi camino', 'para desarrollador web'];
   const eng = ['Engineering my way', 'to Full-Stack Development'];
   const interactive = [['Interactive', 'Interactiva'], ['Standard', 'Estándar']];
   const intText = menu ? interactive[0] : interactive[1];
@@ -30,14 +28,12 @@ export default function Header({
   return (
     <div className="header box-shadow">
       <div className="main-phrase">
-        <img src={wrench} alt="wrench" className="wrench" />
         <h1>
           { lang ? eng[0] : esp[0] }
           <br />
           {' '}
           { lang ? eng[1] : esp[1] }
         </h1>
-        <img src={hat} alt="wrench" className="hat" />
       </div>
       <div id="menu" className="menu closed">
         <button className="btn btn-bar bar-container" type="button" onClick={handleMenu}>
