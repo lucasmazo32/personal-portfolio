@@ -7,4 +7,15 @@ footer {
   justify-content: center;
   padding: 10px;
   background-color: #ddd;
+  .contact-icons {
+    a {
+      margin: 0 0.2rem;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+    svg {
+      height:25px;
+    }
+  }
 }

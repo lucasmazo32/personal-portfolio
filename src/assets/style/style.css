@@ -334,7 +334,8 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -654,6 +655,18 @@ footer {
   background-color: #ddd;
 }
 
+footer .contact-icons a {
+  margin: 0 0.2rem;
+}
+
+footer .contact-icons a:first-of-type {
+  margin-left: 0;
+}
+
+footer .contact-icons svg {
+  height: 25px;
+}
+
 @media screen and (min-width: 768px) {
   .timeline {
     margin: 0 auto;
@@ -801,7 +814,7 @@ footer {
 }
 
 .lang-container label:first-of-type {
-  margin-left: 0.75rem;
+  margin-left: 0.5rem;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }

@@ -34,7 +34,8 @@
 
     flex-grow: 1;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     .img-dec {
       position: absolute;
       border-bottom: solid 1px $page-bk;

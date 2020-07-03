@@ -13,7 +13,7 @@ export default function Background({ lang }) {
         <br />
         <br />
         { lang
-          ? 'I did my internship at Philip Morris International in Colombia in HR (I will not explain why, but this would be an exciting topic to have over coffee). I programmed some macros among all the duties. After doing so and realizing how much passion I put into building them, I realized that programming was my passion.'
+          ? 'I did my internship at Philip Morris International in Colombia in HR (I will not explain why, but this would be an exciting topic to discuss over coffee). I programmed some macros among my other responsibilities. After doing so and realizing how much passion I put into building them, I realized that programming was my passion.'
           : 'Realicé mis prácticas profesionales en Philip Morris International - Colombia en Recursos Humanos (No voy a explicar por qué aquí, pero sería una interesante conversación para tener algún día). Durante mis prácticas programé macro dentro de muchas otras cosas. En ese momento me di cuenta la pasión con la que lo hacía, y supe que la programación era lo mío.'}
         <br />
         <br />
