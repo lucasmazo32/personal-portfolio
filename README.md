@@ -32,11 +32,11 @@ It has another feature in which you can interact with a terminal with some basic
 
 ## Getting started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running, follow these simple steps.
 
 Clone or fork the [repository](https://github.com/lucasmazo32/personal-portfolio).
 
-After clonning and changing directory, run in your terminal:
+After cloning and changing directory, run in your terminal:
 
 > ``` npm install ```
 
