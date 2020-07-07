@@ -58,7 +58,7 @@ const projectContainer = {
     ],
     refs: [
       'https://immense-castle-68670.herokuapp.com/',
-      'https://github.com/lucasmazo32/twitter-redesign',
+      'https://github.com/lucasmazo32/just-like-that',
     ],
   },
   march: {
